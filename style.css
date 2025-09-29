@@ -1,6 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+h1 {
+    font-size: clamp(22px, 6.5vw, 36px);
+    margin: 12px 0 4px;
+}
+
+h2 {
+    font-size: clamp(18px, 5vw, 24px);
+    margin: 8px 0 12px;
+}
+
+p {
+    font-size: clamp(14px, 4vw, 18px);
+    margin: 6px 0;
+}
+
+.muted {
+    color: #9da7c0;
+    font-size: clamp(12px, 3.6vw, 14px);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 16px;
+    margin: 6px 6px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: #18223f;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .2px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    transition: transform .08s ease, filter .15s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+}
+
+.btn:hover {
+    filter: brightness(1.06);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #e6e9f2;
+    background: #0e1326;
+}
+
 img {
-    border-radius: 1500px;
-    width: 450px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+}
+
+.logo {
+    width: clamp(96px, 28vw, 140px);
+    border-radius: 50%;
+}
+
+.wrap {
+    width: min(760px, 100% - 32px);
+    margin-inline: auto;
+    padding-block: 24px;
+    text-align: center;
+}
+
+img {
+    border-radius: 100px;
+    width: 300px;
     height: auto;
 }
 
@@ -15,7 +104,7 @@ h2 {
 }
 
 body {
-    background-color: rgb(51, 255, 0);
+    background-color: rgb(137, 255, 40);
     font-family: "Trebuchet MS";
     color: white;
     text-align: center;
@@ -44,7 +133,7 @@ a {
 .finger {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 70px;
     width: 10px;
     font-size: 20px;
     color: red;
