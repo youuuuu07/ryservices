@@ -124,22 +124,42 @@ a {
     color: slateblue;
 }
 
-.description {
-    font-size: 18px;
-    font-weight: bold;
-    color: red
+/* Indice 3 petits points en haut */
+.hint-top {
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    z-index: 9999;
+    animation: pulse 1.5s infinite;
 }
 
-.finger {
-    position: absolute;
-    top: 10px;
-    right: 70px;
-    width: 10px;
-    font-size: 20px;
-    color: red;
+.hint-top span {
+    font-weight: 600;
+    display: block;
+    margin-top: 2px;
 }
 
-img, iframe {
-    max-width: 100%;
-    height: auto;
+/* Petit effet visuel pour attirer l’œil */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
